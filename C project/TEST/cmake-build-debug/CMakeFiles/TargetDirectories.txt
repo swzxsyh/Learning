@@ -1,0 +1,3 @@
+/Users/swzxsyh/Documents/GitHub/Learning/C project/TEST/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/swzxsyh/Documents/GitHub/Learning/C project/TEST/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/swzxsyh/Documents/GitHub/Learning/C project/TEST/cmake-build-debug/CMakeFiles/TEST.dir
