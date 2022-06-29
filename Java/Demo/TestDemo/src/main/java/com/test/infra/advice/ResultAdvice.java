@@ -1,11 +1,14 @@
 package com.test.infra.advice;
 
 
+import com.test.infra.model.Result;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 /**
+ * 全局异常拦截器
+ *
  * @author swzxsyh
  */
 @Slf4j
@@ -13,7 +16,8 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 public class ResultAdvice {
 
     @ExceptionHandler(NullPointerException.class)
-    public void nullPointException(NullPointerException ex) {
+    public Result nullPointException(NullPointerException ex) {
         log.error("null Point err:", ex);
+        return Result.error("NULL POINT ERROR" + ex.getMessage());
     }
 }
