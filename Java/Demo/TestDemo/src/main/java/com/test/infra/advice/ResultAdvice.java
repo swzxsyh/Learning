@@ -20,4 +20,11 @@ public class ResultAdvice {
         log.error("null Point err:", ex);
         return Result.error("NULL POINT ERROR" + ex.getMessage());
     }
+
+    @ExceptionHandler(ClassCastException.class)
+    public Result classCastException(ClassCastException ex) {
+        log.error("classCastException err:", ex);
+        return Result.error("ClassCastException:" + ex.getMessage());
+    }
+
 }

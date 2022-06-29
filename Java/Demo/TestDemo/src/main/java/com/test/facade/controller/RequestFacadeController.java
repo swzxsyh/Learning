@@ -15,12 +15,8 @@ public class RequestFacadeController {
 
     @GetMapping("/test")
     public Result<?> test() {
-        OtherServiceImpl otherService = RegisterBeanUtils.getBean("OtherServiceImpl", OtherServiceImpl.class);
-        if (Objects.isNull(otherService)) {
-            return Result.error("BEAN UNDEFINED");
-        }
+        RegisterBeanUtils.getBean("OtherServiceImpl", OtherServiceImpl.class);
 //        OtherServiceImpl otherService = new OtherServiceImpl();
-        String name = otherService.getName();
-        return Result.success(name);
+        return Result.success(null);
     }
 }
