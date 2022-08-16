@@ -15,7 +15,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class TestListener {
 
-    @KafkaListener(topics = "${kafka.testTopic:first}")
+    ///@KafkaListener(topics = "${kafka.testTopic:first}")
+    @KafkaListener(topics = "${kafka.testTopic:first}",autoStartup = "false")
     public void consumerKafkaConsumer(ConsumerRecord<String, String> record, Acknowledgment acknowledgment) {
         try {
             String value = record.value();
